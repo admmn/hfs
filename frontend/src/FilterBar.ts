@@ -20,6 +20,7 @@ export function FilterBar() {
     const tabIndex = showFilter ? undefined : -1
     return h('div', { id: 'filter-bar', className: showFilter ? 'show-sliding' : 'before-sliding' },
         h(Checkbox, {
+            'aria-label': t("Select all files"),
             value: all,
             tabIndex,
             'aria-hidden': !showFilter,

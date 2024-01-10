@@ -207,6 +207,7 @@ const Entry = memo(({ entry, midnight, separator }: EntryProps) => {
     return h('li', { className, label: separator },
         h(CustomCode, { name: 'entry', props: { entry }, ifEmpty: () => h(Fragment, {},
             showFilter && h(Checkbox, {
+                'aria-label': t("Select file"),
                 disabled: isLink,
                 'aria-labelledby': ariaId,
                 value: selected[uri],
